@@ -9,7 +9,7 @@ with open('VERSION', 'w') as f:
     f.write(str(VERSION))
 
 setuptools.setup(
-    name="kts-cli",
+    name="kts_cli",
     version=f"0.0.{VERSION}",
     author="Nikita Konodyuk",
     author_email="konodyuk@gmail.com",
@@ -22,6 +22,6 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     entry_points={
-        "console_scripts": ['kts=kts\-cli:run']
+        "console_scripts": ['kts=kts_cli:run']
     }
 )
