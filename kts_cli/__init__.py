@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, '.')
 
 
-from .file_system import build_file_system, check_file_system
+from .file_system import build_file_system
 
 
 def run():
