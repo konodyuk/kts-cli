@@ -74,6 +74,6 @@ def build_file_system(force=False):
 
 
 def create_config():
-    json.dump({'storage_path': os.path.realpath('./storage')}, open('.kts', 'w'))
+    json.dump({'storage_path': os.path.realpath('./storage') + '/'}, open('.kts', 'w'))
     with open('kts_config.py', 'w') as f:
         f.write('seed = 31337\n')
