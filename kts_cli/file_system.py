@@ -1,5 +1,7 @@
 import os
 import shutil
+import json
+
 
 def list_files(startpath):
     for root, dirs, files in os.walk(startpath):
@@ -45,7 +47,7 @@ def build_file_system(force=False):
     :param force: True or False (without confirmation or not)
     :return:
     """
-    paths = ['./input', './notebooks', './storage/info', './storage/sources', './output']
+    paths = ['./input', './notebooks', './storage/info', './output']
 
     if check_existance(paths):
         if force:
@@ -69,3 +71,9 @@ def build_file_system(force=False):
                     os.makedirs(path)
     except Exception as e:
         raise TypeError('Invalid answer')
+
+
+def create_config():
+    json.dump({'storage_path': os.path.realpath('./storage')}, open('.kts', 'w'))
+    with open('kts_config.py', 'w') as f:
+        f.write('seed = 31337\n')

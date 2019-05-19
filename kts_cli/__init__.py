@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, '.')
 
 
-from .file_system import build_file_system
+from .file_system import build_file_system, create_config
 
 
 def run():
@@ -16,5 +16,6 @@ def run():
     args = parser.parse_args(sys.argv[1:])
     if args.subcommand == 'init':
         build_file_system()
+        create_config()
     else:
         parser.print_help()
