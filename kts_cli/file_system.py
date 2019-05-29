@@ -91,7 +91,7 @@ cache_mode = 'disk_and_ram'  # "disk", "disk_and_ram", "ram"
 # Cache policy defines which types of files will be saved.
 # - everything   -- cache everything including feature constructor calls. Default.
 # - service      -- only service files are saved. No feature computation speedup. 
-                    Use if you're not lucky with your resources.
+#                   Use if you're not lucky with your resources.
 cache_policy = 'everything'  # "everything", "service"
 
 # Full path of storage.
