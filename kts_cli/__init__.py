@@ -16,6 +16,5 @@ def run():
     args = parser.parse_args(sys.argv[1:])
     if args.subcommand == 'init':
         build_file_system()
-        create_config()
     else:
         parser.print_help()
