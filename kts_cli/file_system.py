@@ -97,6 +97,9 @@ cache_policy = 'everything'  # "everything", "service"
 # Full path of storage.
 # DO NOT ERASE
 storage_path = '{os.getcwd()}/storage/'
+
+# Task goal: whether greater is better or not
+GOAL = 'MAXIMIZE' # or 'MINIMIZE'
 """
 
 
