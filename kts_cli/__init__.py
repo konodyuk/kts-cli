@@ -9,6 +9,7 @@ from .examples import download_example, VALID_EXAMPLES
 
 def run():
     parser = argparse.ArgumentParser()
+    parser.set_defaults(func=parser.print_help)
     subparsers = parser.add_subparsers(dest="subcommand",
                                        title='subcommands',
                                        description='valid subcommands')
