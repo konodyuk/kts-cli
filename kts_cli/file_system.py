@@ -41,7 +41,7 @@ def clear_all():
             print(e)
 
 
-def build_file_system(force=False):
+def build_file_system(args):
     """
     Builds directory structure for correct running kts.
     :param force: True or False (without confirmation or not)
@@ -49,6 +49,7 @@ def build_file_system(force=False):
     """
     paths = ['./input', './notebooks', './storage', './output', './submissions']
 
+    force = args.force
     if check_existance(paths):
         if force:
             clear_all()
