@@ -69,16 +69,17 @@ def build_file_system(force=False):
             for path in paths:
                 if not os.path.isdir(path):
                     os.makedirs(path)
+
+        if os.path.exists('./kts_config.py'):
+            print("Config found. Overwrite? [y/N]")
+            answer = str(input())
+            if answer.lower() == 'y' or answer.lower() == 'yes':
+                create_config()
+        else:
+            create_config()
     except Exception as e:
         raise TypeError('Invalid answer')
 
-    if os.path.exists('./kts_config.py'):
-        print("Config found. Overwrite? [y/N]")
-        answer = str(input())
-        if answer.lower() == 'y' or answer.lower() == 'yes':
-            create_config()
-    else:
-        create_config()
 
 
 DEFAULT_CONFIG = f"""\
