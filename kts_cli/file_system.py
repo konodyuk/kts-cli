@@ -49,7 +49,7 @@ def build_file_system(args):
     """
     paths = ['./input', './notebooks', './storage', './output', './submissions']
 
-    force = args.force
+    force = False
     if check_existance(paths):
         if force:
             clear_all()
