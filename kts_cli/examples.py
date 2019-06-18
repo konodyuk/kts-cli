@@ -4,7 +4,8 @@ import time
 VALID_EXAMPLES = ['titanic']
 
 
-def download_example(name):
+def download_example(args):
+    name = args.name
     if os.path.exists(name):
         raise OSError(f'Path ./{name} already exists.')
     download_name = ".kts_examples_" + str(int(time.time()))
