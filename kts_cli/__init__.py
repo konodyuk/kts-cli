@@ -13,7 +13,7 @@ def run():
                                        title='subcommands',
                                        description='valid subcommands')
     init_parser = subparsers.add_parser('init')
-    init_parser.set_defaults(func=build_file_system())
+    init_parser.set_defaults(func=build_file_system)
     example_parser = subparsers.add_parser('example')
     example_parser.add_argument('name', type=str, help=f'Name of example, one of {VALID_EXAMPLES}')
     example_parser.set_defaults(func=download_example)
